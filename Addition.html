@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Addition Example</title>
+  <!-- <script src="script.js"></script> -->
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    width: 100px;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-left: 125px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 303px;
+}
+  </style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div>
+  <h1>Addition Example</h1>
+  
+  <label for="num1">Number 1:</label>
+  <input type="text" id="num1">
+  <br>
+  <label for="num2">Number 2:</label>
+  <input type="text" id="num2">
+  <br>
+  <button id="btn">Submit</button>
+  <br>
+  <p id="result"></p>
+</div>
+</div>
+</body>
+<script>
+    function run() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let result = document.getElementById('result')
+        result.innerHTML = `result : ${parseInt(num1) + parseInt(num2)}` ;
+    }
+    document.getElementById('btn').addEventListener('click',run);
+</script>
+</html>
